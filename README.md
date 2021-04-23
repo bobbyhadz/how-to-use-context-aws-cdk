@@ -1,8 +1,7 @@
-# Article name here
+# How to use Context in AWS CDK
 
 A repository for an article on
-[bobbyhadz.com](https://bobbyhadz.com/blog/aws-s3-presigned-url-react)
-`<- Update Link`
+[bobbyhadz.com](https://bobbyhadz.com/blog/how-to-use-context-aws-cdk)
 
 ## How to Use
 
@@ -14,10 +13,12 @@ A repository for an article on
 npm install
 ```
 
-3. Create the CDK stack
+3. Synthesize with Context
 
 ```bash
-npx cdk deploy
+npx cdk synth \
+  --context bucketName=myBucket \
+  --context region=us-east-1
 ```
 
 4. Open the AWS CloudFormation Console and the stack should be created in your

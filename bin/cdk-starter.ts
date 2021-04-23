@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 import * as cdk from '@aws-cdk/core';
-import {CdkStarterStack} from '../lib/cdk-starter-stack';
+import {MyCdkStack} from '../lib/cdk-starter-stack';
 
-const app = new cdk.App();
-new CdkStarterStack(app, 'cdk-stack', {
+const app = new cdk.App({
+  // 👇 setting context in our cdk.App
+  context: {
+    fromApp: {name: 'John', age: 28},
+  },
+});
+new MyCdkStack(app, 'cdk-stack', {
   stackName: 'cdk-stack',
   env: {
     region: process.env.CDK_DEFAULT_REGION,
