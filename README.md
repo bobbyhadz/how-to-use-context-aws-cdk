@@ -3,6 +3,8 @@
 A repository for an article on
 [bobbyhadz.com](https://bobbyhadz.com/blog/how-to-use-context-aws-cdk)
 
+> If you use CDK v1, switch to the cdk-v1 branch
+
 ## How to Use
 
 1. Clone the repository
@@ -16,7 +18,7 @@ npm install
 3. Synthesize with Context
 
 ```bash
-npx cdk synth \
+npx aws-cdk synth \
   --context bucketName=myBucket \
   --context region=us-east-1
 ```
@@ -27,5 +29,5 @@ npx cdk synth \
 5. Cleanup
 
 ```bash
-npx cdk destroy
+npx aws-cdk destroy
 ```
